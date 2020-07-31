@@ -137,8 +137,8 @@ public class DanmakuView extends View {
         super.onDraw(canvas);
         if (status == STATUS_RUNNING) {
             try {
-                canvas.drawColor(Color.TRANSPARENT);
-
+//                canvas.drawColor(Color.TRANSPARENT);
+                canvas.drawColor(Color.TRANSPARENT,PorterDuff.Mode.CLEAR);
                 //先绘制正在播放的弹幕
                 for (int i = 0; i < mChannelMap.size(); i++) {
                     ArrayList<IDanmakuItem> list = mChannelMap.get(i);
