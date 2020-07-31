@@ -1,7 +1,6 @@
 package com.opendanmaku.sample;
 
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Spannable;
@@ -85,11 +84,11 @@ public class OpenDanmakuActivity extends AppCompatActivity implements View.OnCli
                 return true;
             }
         });
-        //设置播放地址
-        videoView.setVideoURI(Uri.parse("http://it.nangongyibin.com:8080/resource/cc.mp4"));
-//        videoView.setVideoPath("http://it.nangongyibin.com:8080/resource/cc.mp4");
         //设置控制面板
-        videoView.setMediaController(new MediaController(OpenDanmakuActivity.this));
+        videoView.setMediaController(new MediaController(this));
+        //设置播放地址
+//        videoView.setVideoURI(Uri.parse("http://it.nangongyibin.com:8080/resource/cc.mp4"));
+        videoView.setVideoPath("http://it.nangongyibin.com:8080/resource/cc.mp4");
     }
 
     /**
